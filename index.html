@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marco Villasuso | Aerospace Engineering</title>
+  <meta name="description" content="Marco Villasuso: aerospace engineering student at CU Boulder. Propulsion, flight vehicle systems, CAD, FEA, CFD, and hardware integration." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Animated starfield (drawn by js/stars.js) -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <a href="#top" class="nav-logo">M. Villasuso</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <p class="eyebrow">Aerospace Engineering / CU Boulder</p>
+      <h1>Marco Villasuso</h1>
+      <p class="hero-sub">
+        I work on rocket engines, flight vehicles, and the hardware that connects them,
+        from the first CAD sketch to the test stand.
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="assets/resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Resume (PDF)</a>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section reveal">
+      <div class="section-head"><h2>About</h2><span class="sheet">Sheet 01 / 06</span></div>
+      <div class="about-grid">
+        <div class="panel prose">
+          <p>
+            I'm an aerospace engineering student at the University of Colorado Boulder, and most of
+            what I've learned so far has come from building things that have to survive a test.
+            On the Big Dumb Rockets team I've gone from cutting gaskets and LOX-cleaning plumbing
+            for an engine's first hot-fire to leading the team that designs a scale flight vehicle.
+          </p>
+          <p>
+            What I enjoy most is integration: the place where a structures problem, a fluids problem,
+            and a scheduling problem all turn out to be the same problem. I like design reviews that
+            catch things early, and test days where something unexpected comes up and you have to
+            work out why on the spot.
+          </p>
+        </div>
+        <ul class="stat-list">
+          <li class="panel"><strong>~800 lbf</strong><span>Ethanol/LOX hot-fire supported</span></li>
+          <li class="panel"><strong>~10</strong><span>Engineers led on Hopper Demo</span></li>
+          <li class="panel stat-gpa">
+            <div class="gpa-head">
+              <strong class="gpa-value" data-gpa="3.56">3.56</strong>
+              <span>/ 4.0 GPA</span>
+            </div>
+            <div class="gpa-bar" role="meter" aria-label="GPA" aria-valuemin="0" aria-valuemax="4" aria-valuenow="3.56">
+              <div class="gpa-fill" style="--gpa: 3.56"></div>
+            </div>
+            <div class="gpa-scale" aria-hidden="true">
+              <span style="left: 0%">0</span><span style="left: 25%">1.0</span><span style="left: 50%">2.0</span><span style="left: 75%">3.0</span><span style="left: 100%">4.0</span>
+            </div>
+            <span class="gpa-note">Dean's List, 3 of 4 semesters</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== EDUCATION ===================== -->
+    <section id="education" class="section reveal">
+      <div class="section-head"><h2>Education</h2><span class="sheet">Sheet 02 / 06</span></div>
+      <article class="panel">
+        <div class="panel-head">
+          <h3>University of Colorado Boulder</h3>
+          <span class="label">Aug 2024 – May 2028 (expected)</span>
+        </div>
+        <p class="role">B.S. Aerospace Engineering</p>
+        <div class="prose">
+          <p>
+            My coursework covers aerodynamics, structures, vehicle dynamics, and systems
+            integration. I get the most out of it when a class lines up with something on the
+            team, like analyzing a wing load on paper one week and running the same problem in
+            FEA on my own aircraft the next.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== PROJECTS ===================== -->
+    <section id="projects" class="section">
+      <div class="section-head reveal"><h2>Projects</h2><span class="sheet">Sheet 03 / 06</span></div>
+
+      <!--
+        HOW TO ADD PHOTOS
+        Drop images into the folder named in each <img src="...">. Any missing
+        image shows a placeholder with its expected path, so you can see what to add.
+        Add or remove <figure> blocks freely; the gallery grid adapts.
+        Comments marked "ADD:" are spots where a specific detail would strengthen the story.
+      -->
+
+      <!-- ---------- Hopper Demo ---------- -->
+      <article class="project panel reveal" id="hopper-demo">
+        <div class="project-text">
+          <div class="panel-head">
+            <p class="label accent">Big Dumb Rockets / Team Lead</p>
+            <span class="label">Aug 2025 – Present</span>
+          </div>
+          <h3>Hopper Demo</h3>
+          <div class="prose">
+            <p>
+              Hopper Demo is BDR's scale testbed for the systems a flight vehicle needs:
+              landing suspension, guidance and control, thrust vectoring, flight dynamics, and
+              flight computers. It lets the team prove those systems at small scale, where
+              mistakes are cheap, before they're trusted on full-size hardware.
+            </p>
+            <p>
+              As team lead, most of my work happens at the interfaces. Every BDR subteam owns
+              part of the vehicle, so I work with their co-leads to make sure those parts fit
+              together mechanically, electrically, and in software. I took a team of about ten
+              through trade studies, design work, and formal reviews, and we reached a design
+              that hit the scale targets without going over budget.
+            </p>
+            <!-- ADD: one trade study you ran and what it decided (e.g. a suspension or TVC choice) -->
+          </div>
+          <ul class="tags">
+            <li>Systems Integration</li><li>GNC</li><li>TVC</li><li>Leadership</li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <figure><img src="assets/img/hopper/1.jpg" alt="Hopper Demo vehicle" loading="lazy" /><figcaption>Caption here</figcaption></figure>
+          <figure><img src="assets/img/hopper/2.jpg" alt="Hopper Demo CAD" loading="lazy" /><figcaption>Caption here</figcaption></figure>
+        </div>
+      </article>
+
+      <!-- ---------- Capacitive Fill ---------- -->
+      <article class="project panel reveal" id="capacitive-fill">
+        <div class="project-text">
+          <div class="panel-head">
+            <p class="label accent">Big Dumb Rockets / Team Lead</p>
+          </div>
+          <h3>Capacitive Fill</h3>
+          <div class="prose">
+            <p>
+              You can't look inside a tank of liquid oxygen, but during loading you need to
+              know exactly how full it is. Capacitive Fill is our answer: a level sensor built
+              into the tank. Liquid and vapor have different dielectric constants, so as the
+              liquid rises past the sensor its capacitance changes, and that change tells you
+              the fill level.
+            </p>
+            <p>
+              I led a team of three from design through manufacturing and integration, and
+              worked with machinists to fit the sensor into model tanks. In testing it tracked
+              the fill level from empty to full to within ±5%.
+            </p>
+            <!-- ADD: sensor geometry, test fluid, or what you'd change in the next revision -->
+          </div>
+          <ul class="tags">
+            <li class="tag-frost" data-fx="frost">Cryogenics</li><li>Sensors</li><li>Manufacturing</li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <figure><img src="assets/img/capacitive-fill/1.jpg" alt="Capacitive fill sensor" loading="lazy" /><figcaption>Caption here</figcaption></figure>
+          <figure><img src="assets/img/capacitive-fill/2.jpg" alt="Fill level test data" loading="lazy" /><figcaption>Caption here</figcaption></figure>
+        </div>
+      </article>
+
+      <!-- ---------- Regen Mk II ---------- -->
+      <article class="project panel reveal" id="regen-mk2">
+        <div class="project-text">
+          <div class="panel-head">
+            <p class="label accent">Big Dumb Rockets / Propulsion</p>
+          </div>
+          <h3>Regen Mk II</h3>
+          <div class="prose">
+            <p>
+              Regen Mk II is the next step from Mk I: a regeneratively cooled Ethanol/LOX engine
+              designed for long-duration, throttleable, gimbaled burns. In a regen engine the fuel
+              runs through channels in the chamber wall before it's injected, so it carries away
+              heat that would otherwise melt the engine. Longer burns, throttling, and gimbaling
+              each make that thermal and structural balance harder.
+            </p>
+            <p>
+              I contributed structural and fluid analysis, helping check that the chamber and its
+              cooling passages can handle the pressures, temperatures, and loads the new
+              requirements bring.
+            </p>
+            <!-- ADD: what you analyzed specifically (e.g. channel pressure drop, wall stress) and the tool used -->
+          </div>
+          <ul class="tags">
+            <li>FEA</li><li>CFD</li><li>Propulsion</li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <figure><img src="assets/img/regen-mk2/1.jpg" alt="Regen Mk II analysis" loading="lazy" /><figcaption>Caption here</figcaption></figure>
+        </div>
+      </article>
+
+      <!-- ---------- Regen Mk I ---------- -->
+      <article class="project panel reveal" id="regen-mk1">
+        <div class="project-text">
+          <div class="panel-head">
+            <p class="label accent">Big Dumb Rockets / Propulsion</p>
+          </div>
+          <h3>Regen Mk I</h3>
+          <div class="prose">
+            <p>
+              Before an engine fires, every part has to be checked against what it's supposed to
+              be. On Mk I, I did hands-on integration and acceptance testing: inspecting
+              components, verifying the assembly, cutting gaskets, machining the injector
+              manifold, and LOX-cleaning the plumbing. That last step matters because any oil or
+              debris left in an oxygen line can ignite.
+            </p>
+            <p>
+              On test day I was on site helping troubleshoot problems as they came up, and the
+              engine completed a successful hot-fire at about 800 lbf of thrust. Afterward we
+              took it apart for post-test teardown analysis, reading the hardware for what the
+              firing did to it and carrying those lessons into Mk II.
+            </p>
+            <!-- ADD: one specific problem you solved on test day -->
+          </div>
+          <ul class="tags">
+            <li>LOX Handling</li><li>Acceptance Testing</li><li class="tag-hotfire" data-fx="flame">Hot-Fire</li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <figure><img src="assets/img/regen-mk1/1.jpg" alt="Regen Mk I hot-fire" loading="lazy" /><figcaption>Caption here</figcaption></figure>
+          <figure><img src="assets/img/regen-mk1/2.jpg" alt="Regen Mk I hardware" loading="lazy" /><figcaption>Caption here</figcaption></figure>
+        </div>
+      </article>
+
+      <!-- ---------- RC Jet ---------- -->
+      <article class="project panel reveal" id="rc-jet">
+        <div class="project-text">
+          <div class="panel-head">
+            <p class="label accent">Solo Project</p>
+            <span class="label">Jul – Aug 2026</span>
+          </div>
+          <h3>RC Jet</h3>
+          <div class="prose">
+            <p>
+              I spent a summer taking an aircraft through the whole design cycle by myself: a
+              ducted-fan RC jet that I designed, simulated, built, and flew. The airframe was
+              modeled in <span class="brand-onshape">Onshape</span>, the wing was sized against
+              FEA wing-loading results from PrePoMax, and flow analysis in flow5 put the top
+              speed at about 50 mph.
+            </p>
+            <p>
+              The whole airframe is 3D printed, which made it fast to iterate. It took three
+              design revisions to get to a flight-ready version. On the first powered flight it
+              stayed up for 30 seconds and landed safely in the grass.
+            </p>
+            <!-- ADD: what changed between iterations, e.g. weight, CG, or print orientation -->
+          </div>
+          <ul class="tags">
+            <li class="brand-onshape">Onshape</li><li>PrePoMax</li><li>flow5</li><li>3D Printing</li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <figure><img src="assets/img/rc-jet/1.jpg" alt="RC jet airframe" loading="lazy" /><figcaption>Caption here</figcaption></figure>
+          <figure><img src="assets/img/rc-jet/2.jpg" alt="RC jet FEA results" loading="lazy" /><figcaption>Caption here</figcaption></figure>
+          <figure><img src="assets/img/rc-jet/3.jpg" alt="RC jet in flight" loading="lazy" /><figcaption>Caption here</figcaption></figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== EXPERIENCE ===================== -->
+    <section id="experience" class="section reveal">
+      <div class="section-head"><h2>Experience</h2><span class="sheet">Sheet 04 / 06</span></div>
+      <article class="panel">
+        <div class="panel-head">
+          <h3>CU Book Store</h3>
+          <span class="label">Aug 2024 – Present</span>
+        </div>
+        <p class="role">Student Lead for Technology (Dec 2024 – Present)</p>
+        <div class="prose">
+          <p>
+            I keep the store's technical equipment running: 3D printers, laser cutters, computers,
+            tablets, kiosks, and the CAD stations students depend on. When something breaks, I
+            diagnose it, fix it or coordinate the repair, and get it back into service.
+          </p>
+          <p>
+            As a lead I also look after the people side. I tested and rolled out a new rental
+            system, trained staff on new equipment and procedures, and handled employee training
+            and performance evaluations while dividing up technical work across the team.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== SKILLS ===================== -->
+    <section id="skills" class="section reveal">
+      <div class="section-head"><h2>Technical Skills</h2><span class="sheet">Sheet 05 / 06</span></div>
+      <p class="section-intro">Hover over a skill (or tap it on mobile) to see where I've used it.</p>
+      <div class="skills-grid">
+        <div class="skill-group panel" tabindex="0">
+          <h4>CAD</h4><p>SOLIDWORKS, <span class="brand-onshape">Onshape</span></p>
+          <p class="used-in">Used on <a href="#rc-jet">RC Jet</a></p>
+        </div>
+        <div class="skill-group panel" tabindex="0">
+          <h4>FEA</h4><p>PrePoMax, SOLIDWORKS Simulation</p>
+          <p class="used-in">Used on <a href="#rc-jet">RC Jet</a>, <a href="#regen-mk2">Regen Mk II</a></p>
+        </div>
+        <div class="skill-group panel" tabindex="0">
+          <h4>CFD</h4><p>Ansys Fluent, OpenFOAM, flow5</p>
+          <p class="used-in">Used on <a href="#rc-jet">RC Jet</a>, <a href="#regen-mk2">Regen Mk II</a></p>
+        </div>
+        <div class="skill-group panel" tabindex="0">
+          <h4>Manufacturing</h4><p>3D printing (PLA, ABS, ASA, SLA), laser cutting, 2-axis CNC, MIG welding</p>
+          <p class="used-in">Used on <a href="#rc-jet">RC Jet</a>, <a href="#regen-mk1">Regen Mk I</a>, <a href="#capacitive-fill">Capacitive Fill</a></p>
+        </div>
+        <div class="skill-group panel" tabindex="0">
+          <h4>Systems</h4><p>Systems integration, flight hardware, propulsion systems, cryogenic systems</p>
+          <p class="used-in">Used on <a href="#hopper-demo">Hopper Demo</a>, <a href="#capacitive-fill">Capacitive Fill</a>, <a href="#regen-mk1">Regen Mk I</a></p>
+        </div>
+        <div class="skill-group panel" tabindex="0">
+          <h4>Testing &amp; Ops</h4><p>Engine hot-fires, hardware acceptance testing, LOX handling, troubleshooting</p>
+          <p class="used-in">Used on <a href="#regen-mk1">Regen Mk I</a>, <a href="#capacitive-fill">Capacitive Fill</a></p>
+        </div>
+        <div class="skill-group panel" tabindex="0">
+          <h4>Programming</h4><p>C &amp; C++, Python, MATLAB, Lua</p>
+          <!-- ADD: <p class="used-in">Used on <a href="#...">...</a></p> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section id="contact" class="section reveal contact">
+      <div class="section-head"><h2>Contact</h2><span class="sheet">Sheet 06 / 06</span></div>
+      <div class="panel contact-panel">
+        <p>
+          I'm looking for internships and co-ops in propulsion, flight systems, and integration.
+          U.S. citizen, based in Boulder, CO.
+        </p>
+        <div class="hero-cta">
+          <a href="mailto:marco.villasuso@outlook.com" class="btn btn-primary">Email Me</a>
+          <a href="https://www.linkedin.com/in/marco-villasuso/" class="btn btn-ghost" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Marco Villasuso / Boulder, CO</p>
+  </footer>
+
+  <script src="js/stars.js"></script>
+  <script src="js/fx.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

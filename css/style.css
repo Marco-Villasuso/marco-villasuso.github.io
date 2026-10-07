@@ -364,7 +364,7 @@ h1, h2, h3, h4 {
   padding: 12px;
   word-break: break-all;
 }
-.img-placeholder::before { content: "+ add photo"; font-size: .85rem; color: var(--accent); }
+.img-placeholder::before { content: "Coming Soon"; font-size: .85rem; color: var(--accent); }
 
 @media (max-width: 860px) {
   .about-grid, .project { grid-template-columns: 1fr; }
